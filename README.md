@@ -18,7 +18,8 @@ You also need Leiningen(for instruction on how to install Leiningen see: http://
 ## Usage
 
 You will need Java installed on your system to run the application. 
-For instructions on how to install Java see: https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html 
+For instructions on how to install Java see: https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html
+Locate "numberprettifier-0.1.0-standalone.jar"(A runnable jar has been committed under the "bin" folder in the repository).  
 
     $ java -jar numberprettifier-0.1.0-standalone.jar $number
 
@@ -27,7 +28,7 @@ Replace $number with a number to be prettified.
 ## Options
 
 In order to make things easier for the user I have added a runnable jar version of the application in the GitHub 
-repository. This way you need just Java running on your system to run the application. 
+repository, under the "bin" folder. This way you need just Java running on your system to run the application. 
 
 ## Examples
 
