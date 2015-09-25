@@ -10,9 +10,9 @@
     (is (= "1.1B" (number-prettifier 1123456789)))
     (is (= "2.9T" (number-prettifier 2923456789000N)))
     (is (= "2923.5T" (number-prettifier 2923456789000000N)))
-    (is (= "0" (number-prettifier 0)))
-    (is (= "-1" (number-prettifier -1)))
-    (is (= "-1000000" (number-prettifier -1000000)) "Negative numbers are not prettified")
+    (is (thrown? AssertionError (number-prettifier 0)))
+    (is (thrown? AssertionError (number-prettifier -1)))
+    (is (thrown? AssertionError (number-prettifier -1000000)) "Negative numbers are not prettified")
     ))
 
 (deftest divide-test
