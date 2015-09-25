@@ -14,3 +14,11 @@ Example(input => output):
 2500000.35      => 2.5M
 532             => 532
 1123456789      => 1.1B
+
+# Design considerations
+
+ - I followed the YAGNY principle while completing this task.
+ - In the spirit of the YAGNY principle I did not design this to be a web application, since there was no requirement for that.
+ - The application is a standalone Java/Clojure console application. 
+ - I did not think it necessary to have a design document attached to this project since there is only one function, and helpers, performing the task, plus tests.
+
