@@ -5,22 +5,23 @@
 (def billion 1000000000N)
 (def million 1000000)
 
+(defn- abs [n]
+  (if (pos? n) n (- n)))
+
 (defn- in-range
   "Determine id a number is in a specified short scale range."
   [qt number]
-  (<= 1 (quot number qt)))
+  (<= 1 (abs (quot number qt))))
 
 (defn prettify
   "Returns a prettified version of the number, i.e. 1000000 will become 1M and so on."
   ([number]
-   {:pre [(pos? number)]}
    (cond
      (in-range trillion number) (str (prettify number trillion) "T")
      (in-range billion number) (str (prettify number billion) "B")
      (in-range million number) (str (prettify number million) "M")
      :else (str number)))
   ([number qt]
-   {:pre [(pos? number)]}
    (if (zero? (mod number qt))
      (str (quot number qt))
      (format "%.1f" (/ (double number) qt)))))
